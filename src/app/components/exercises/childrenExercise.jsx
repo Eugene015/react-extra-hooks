@@ -13,9 +13,9 @@ const ChildrenExercise = () => {
                 <code>React.Children.toArray</code>
             </p>
             <Wrapper>
-                <Component id={"1"} />
-                <Component id={"2"} />
-                <Component id={"3"} />
+                <Component />
+                <Component />
+                <Component />
             </Wrapper>
         </CollapseWrapper>
     );

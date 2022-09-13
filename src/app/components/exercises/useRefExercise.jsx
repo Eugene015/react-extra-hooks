@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
 import CollapseWrapper from "../common/collapse";
 const UseRefExercise = () => {
-    const someRef = useRef("Блок");
+    const someRef = useRef(null);
+    const textRef = useRef("Блок");
     const handleClick = () => {
         someRef.current.style.width = "80px";
         someRef.current.style.height = "150px";
-        someRef.current.textContent = "text";
+        textRef.current.textContent = "text";
     };
     return (
         <CollapseWrapper title="Упражнение">
@@ -26,7 +27,7 @@ const UseRefExercise = () => {
                     color: "white"
                 }}
             >
-                <small>{someRef.current}</small>
+                <small ref={textRef}>{textRef.current}</small>
             </div>
             <button
                 className="btn btn-outline-secondary mt-2"
